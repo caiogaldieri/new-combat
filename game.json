@@ -15,18 +15,42 @@
     "projectFile": "/home/mgaldieri/GDevelop projects/new COMBAT/game.json",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
-    "version": "1.0.0",
+    "version": "0.0.2 ",
     "winExecutableFilename": "",
     "winExecutableIconFile": "",
-    "name": "Project",
-    "author": "",
+    "name": "new COMBAT",
+    "author": "caio godoy galdieri",
     "windowWidth": 800,
     "windowHeight": 600,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "/home/mgaldieri/GDevelop projects/new COMBAT/build",
     "maxFPS": 60,
     "minFPS": 10,
     "verticalSync": false,
-    "platformSpecificAssets": {},
+    "platformSpecificAssets": {
+      "android-icon-144": "",
+      "android-icon-192": "",
+      "android-icon-36": "",
+      "android-icon-48": "",
+      "android-icon-72": "",
+      "android-icon-96": "",
+      "desktop-icon-512": "",
+      "ios-icon-100": "",
+      "ios-icon-114": "",
+      "ios-icon-120": "",
+      "ios-icon-144": "",
+      "ios-icon-152": "",
+      "ios-icon-167": "",
+      "ios-icon-180": "",
+      "ios-icon-29": "",
+      "ios-icon-40": "",
+      "ios-icon-50": "",
+      "ios-icon-57": "",
+      "ios-icon-58": "",
+      "ios-icon-60": "",
+      "ios-icon-72": "",
+      "ios-icon-76": "",
+      "ios-icon-80": ""
+    },
     "loadingScreen": {
       "showGDevelopSplash": true
     },
@@ -115,18 +139,18 @@
   "variables": [],
   "layouts": [
     {
-      "b": 209,
+      "b": 255,
       "disableInputWhenNotFocused": true,
       "mangledName": "menu",
       "name": "menu",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
-      "r": 209,
+      "r": 0,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 209,
+      "v": 6,
       "uiSettings": {
         "grid": false,
         "gridB": 255,
@@ -157,6 +181,36 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "logo",
+          "width": 0,
+          "x": 193,
+          "y": 57,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "logoNew",
+          "width": 0,
+          "x": 195,
+          "y": 52,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -176,6 +230,42 @@
             "b": 0,
             "g": 0,
             "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "logo",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "COMBAT",
+          "font": "Minecraft Evenings.otf",
+          "characterSize": 100,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "logoNew",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "New",
+          "font": "Minecraft-Regular.otf",
+          "characterSize": 21,
+          "color": {
+            "b": 0,
+            "g": 235,
+            "r": 255
           }
         }
       ],
@@ -249,18 +339,18 @@
       "behaviorsSharedData": []
     },
     {
-      "b": 209,
+      "b": 99,
       "disableInputWhenNotFocused": true,
       "mangledName": "jogando",
       "name": "jogando",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
-      "r": 209,
+      "r": 231,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 209,
+      "v": 201,
       "uiSettings": {
         "grid": false,
         "gridB": 255,
@@ -278,7 +368,16 @@
       "variables": [],
       "instances": [],
       "objects": [],
-      "events": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
       "layers": [
         {
           "name": "",
