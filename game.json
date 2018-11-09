@@ -7,6 +7,7 @@
     "revision": 0
   },
   "properties": {
+    "adMobAppId": "",
     "folderProject": false,
     "linuxExecutableFilename": "",
     "macExecutableFilename": "",
@@ -373,6 +374,24 @@
         "name": "imgs/canhao_p2.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "imgs/tiro_p1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "imgs/tiro_p1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "imgs/tiro_p2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "imgs/tiro_p2.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -387,6 +406,18 @@
     {
       "name": "VelocLinear",
       "value": "50"
+    },
+    {
+      "name": "VelocTiro",
+      "value": "400"
+    },
+    {
+      "name": "IntervTiro",
+      "value": "0.5"
+    },
+    {
+      "name": "MaxVidas",
+      "value": "5"
     }
   ],
   "layouts": [
@@ -476,7 +507,7 @@
           "variables": [],
           "behaviors": [],
           "string": "Jogar",
-          "font": "Minecraft-Regular.otf",
+          "font": "Minecraft-Regular.ttf",
           "characterSize": 40,
           "color": {
             "b": 0,
@@ -494,7 +525,7 @@
           "variables": [],
           "behaviors": [],
           "string": "COMBAT",
-          "font": "Minecraft Evenings.otf",
+          "font": "Minecraft Evenings.ttf",
           "characterSize": 100,
           "color": {
             "b": 0,
@@ -512,7 +543,7 @@
           "variables": [],
           "behaviors": [],
           "string": "New",
-          "font": "Minecraft-Regular.otf",
+          "font": "Minecraft-Regular.ttf",
           "characterSize": 21,
           "color": {
             "b": 0,
@@ -617,7 +648,12 @@
         "zoomFactor": 1
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "VidaP1",
+          "value": "3"
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -627,8 +663,23 @@
           "locked": false,
           "name": "canhaoP1",
           "width": 0,
-          "x": 254.874,
-          "y": 377.802,
+          "x": 164.828,
+          "y": 176,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -180,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "canhaoP2",
+          "width": 0,
+          "x": 614.828,
+          "y": 303,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -640,11 +691,26 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "canhaoP2",
+          "name": "numVidasP1",
           "width": 0,
-          "x": 619.973,
-          "y": 151.317,
+          "x": 127.828,
+          "y": 61,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "numVidasP2",
+          "width": 0,
+          "x": 611,
+          "y": 76,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -669,7 +735,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "imgs/canhao_p1.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Tiro",
+                          "x": 45,
+                          "y": 27.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -707,6 +779,56 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "imgs/canhao_p2.png",
+                      "points": [
+                        {
+                          "name": "Tiro",
+                          "x": 45,
+                          "y": 27.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "tiroP1",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "extraBorder": 0,
+              "name": "DestroyOutside",
+              "type": "DestroyOutsideBehavior::DestroyOutside"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "imgs/tiro_p1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -726,6 +848,86 @@
               ]
             }
           ]
+        },
+        {
+          "name": "tiroP2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "extraBorder": 0,
+              "name": "DestroyOutside",
+              "type": "DestroyOutsideBehavior::DestroyOutside"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "imgs/tiro_p2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "numVidasP1",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "0",
+          "font": "Minecraft-Regular.ttf",
+          "characterSize": 40,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "numVidasP2",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "0",
+          "font": "Minecraft-Regular.ttf",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -827,12 +1029,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceXY"
+                    "value": "AddForceAL"
                   },
                   "parameters": [
                     "canhaoP1",
-                    "GlobalVariable(VelocLinear)*sin(canhaoP1.Angle()*3.14/180)",
-                    "-GlobalVariable(VelocLinear)*cos(canhaoP1.Angle()*3.14/180)",
+                    "canhaoP1.Direction()",
+                    "GlobalVariable(VelocLinear)",
                     ""
                   ],
                   "subInstructions": []
@@ -861,13 +1063,96 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceXY"
+                    "value": "AddForceAL"
                   },
                   "parameters": [
                     "canhaoP1",
-                    "-GlobalVariable(VelocLinear)*sin(canhaoP1.Angle()*3.14/180)",
-                    "GlobalVariable(VelocLinear)*cos(canhaoP1.Angle()*3.14/180)",
+                    "canhaoP1.Direction()",
+                    "-GlobalVariable(VelocLinear)",
                     ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "LAlt"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectTimer"
+                  },
+                  "parameters": [
+                    "canhaoP1",
+                    "\"FireRate\"",
+                    "GlobalVariable(IntervTiro)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "tiroP1",
+                    "canhaoP1.PointX(Tiro)",
+                    "canhaoP1.PointY(Tiro)",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "tiroP1",
+                    "tiroP1",
+                    "canhaoP1.Direction()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "tiroP1",
+                    "canhaoP1.Direction()",
+                    "GlobalVariable(VelocTiro)",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "canhaoP1",
+                    "\"FireRate\""
                   ],
                   "subInstructions": []
                 }
@@ -975,12 +1260,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceXY"
+                    "value": "AddForceAL"
                   },
                   "parameters": [
                     "canhaoP2",
-                    "GlobalVariable(VelocLinear)*sin(canhaoP2.Angle()*3.14/180)",
-                    "-GlobalVariable(VelocLinear)*cos(canhaoP2.Angle()*3.14/180)",
+                    "canhaoP2.Direction()",
+                    "GlobalVariable(VelocLinear)",
                     ""
                   ],
                   "subInstructions": []
@@ -1009,13 +1294,322 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceXY"
+                    "value": "AddForceAL"
                   },
                   "parameters": [
                     "canhaoP2",
-                    "-GlobalVariable(VelocLinear)*sin(canhaoP2.Angle()*3.14/180)",
-                    "GlobalVariable(VelocLinear)*cos(canhaoP2.Angle()*3.14/180)",
+                    "canhaoP2.Direction()",
+                    "-GlobalVariable(VelocLinear)",
                     ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Space"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectTimer"
+                  },
+                  "parameters": [
+                    "canhaoP2",
+                    "\"FireRate\"",
+                    "GlobalVariable(IntervTiro)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "tiroP2",
+                    "canhaoP2.PointX(Tiro)",
+                    "canhaoP2.PointY(Tiro)",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "tiroP1",
+                    "tiroP1",
+                    "canhaoP2.Direction()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "tiroP2",
+                    "canhaoP2.Direction()",
+                    "GlobalVariable(VelocTiro)",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "canhaoP2",
+                    "\"FireRate\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": true,
+          "name": "VidaP1",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "VidaP1",
+                    "=",
+                    "GlobalVariable(MaxVidas)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "numVidasP1",
+                    "=",
+                    "VariableString(VidaP1)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Collision"
+                  },
+                  "parameters": [
+                    "canhaoP1",
+                    "tiroP2",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "tiroP2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "VidaP1",
+                    "-",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": true,
+          "name": "VidaP2",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "VidaP2",
+                    "=",
+                    "GlobalVariable(MaxVidas)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "numVidasP2",
+                    "=",
+                    "VariableString(VidaP2)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Collision"
+                  },
+                  "parameters": [
+                    "canhaoP2",
+                    "tiroP1",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "tiroP1",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "VidaP2",
+                    "-",
+                    "1"
                   ],
                   "subInstructions": []
                 }
