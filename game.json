@@ -230,6 +230,13 @@
         "name": "imgs/barra_centro.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "TheFatRat_Unity.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "TheFatRat_Unity.mp3",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -344,6 +351,36 @@
           "x": 758,
           "y": 572,
           "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "musica",
+          "width": 0,
+          "x": 13,
+          "y": 574,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "btnmusica",
+          "width": 53,
+          "x": 15,
+          "y": 515,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -567,6 +604,14 @@
                     "",
                     ""
                   ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": ""
+                  },
+                  "parameters": [],
                   "subInstructions": []
                 }
               ],
@@ -4494,6 +4539,66 @@
           "x": 230,
           "y": 360,
           "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 420,
+          "layer": "Paredes",
+          "locked": false,
+          "name": "parede",
+          "width": 10,
+          "x": 680,
+          "y": 110,
+          "zOrder": 23,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 420,
+          "layer": "",
+          "locked": false,
+          "name": "parede",
+          "width": 10,
+          "x": 120,
+          "y": 170,
+          "zOrder": 24,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 10,
+          "layer": "",
+          "locked": false,
+          "name": "parede",
+          "width": 420,
+          "x": 260,
+          "y": 170,
+          "zOrder": 25,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 10,
+          "layer": "",
+          "locked": false,
+          "name": "parede",
+          "width": 470,
+          "x": 130,
+          "y": 520,
+          "zOrder": 26,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
