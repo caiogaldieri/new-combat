@@ -12,11 +12,11 @@
     "linuxExecutableFilename": "",
     "macExecutableFilename": "",
     "orientation": "landscape",
-    "packageName": "com.example.gamename",
+    "packageName": "com.caiogaldieri.combat",
     "projectFile": "/home/mgaldieri/GDevelop projects/new COMBAT/game.json",
     "sizeOnStartupMode": "",
     "useExternalSourceFiles": false,
-    "version": "0.0.90 ",
+    "version": "1.0.1",
     "winExecutableFilename": "",
     "winExecutableIconFile": "",
     "name": "COMBAT",
@@ -236,6 +236,33 @@
         "kind": "audio",
         "metadata": "",
         "name": "TheFatRat_Unity.mp3",
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "imgs/bloco_de_parede.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "imgs/bloco_de_parede.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "imgs/botaodemusica.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "imgs/botaodemusica.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "imgs/botaodemusica0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "imgs/botaodemusica0.png",
+        "smoothed": true,
         "userAdded": false
       }
     ],
@@ -1260,7 +1287,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "btnmusica",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -1269,7 +1296,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "../../Documents/fonts for game by caio/botaodemusica.png",
+                      "image": "imgs/botaodemusica.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1286,7 +1313,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "../../Documents/fonts for game by caio/botaodemusica0.png",
+                      "image": "imgs/botaodemusica0.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3448,7 +3475,7 @@
         {
           "height": 10,
           "name": "parede",
-          "texture": "../../Documents/fonts for game by caio/bloco_de_parede.png",
+          "texture": "imgs/bloco_de_parede.png",
           "type": "TiledSpriteObject::TiledSprite",
           "width": 10,
           "variables": [],
