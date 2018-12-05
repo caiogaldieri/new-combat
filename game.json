@@ -407,6 +407,19 @@
                 "Left"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "press_spase_bar",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
